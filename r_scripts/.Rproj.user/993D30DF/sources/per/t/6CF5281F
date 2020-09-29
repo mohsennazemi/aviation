@@ -1,0 +1,25 @@
+{
+    "id": "6CF5281F",
+    "path": "~/Dropbox/Airport Experience Project/2020 COVID-19 Survey/r_scripts/df_survey.R",
+    "project_path": "df_survey.R",
+    "type": "r_source",
+    "hash": "524880694",
+    "contents": "",
+    "dirty": false,
+    "created": 1600070947614.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "cursorPosition": "16,10",
+        "scrollLine": "0",
+        "docOutlineVisible": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1600081538,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1600081538655,
+    "read_only": false,
+    "read_only_alternatives": []
+}

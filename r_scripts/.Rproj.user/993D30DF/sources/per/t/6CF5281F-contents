@@ -1,0 +1,36 @@
+library(plyr)
+library(dplyr)
+library(readxl)
+library(tidyr)
+library(reshape2)
+library(stringr)
+library(stringi)
+library(ggplot2)
+library(janitor)
+
+setwd("/Users/mohsennazemi/Dropbox/Airport Experience Project/2020 COVID-19 Survey/")
+
+#### read data
+df_data <- read_excel("pilot/V10+Survey+1+(Pax)_September+14,+2020_11.55.xlsx", col_names = TRUE, skip = 1)
+
+df_survey <- df_data %>%
+  select(-contains("Timing"))
+
+df_timings <- df_data %>%
+  select(contains("Timing")) %>%
+  select(contains("Submit")) %>%
+  clean_names()
+
+# define the plot in a function
+my_plot <- function(dataframe, column) {
+  distribution <- ggplot(dataframe, aes(x = column)) +
+    geom_density() +
+    xlab("Time (s)")
+  return(distribution)
+}
+
+my_plot(df_timings, df_timings$timing_page_submit_20)
+
+
+
+
